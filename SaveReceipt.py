@@ -78,7 +78,7 @@ def getRenterInfo():
 
 
 def saveFile():
-    source = wb.active
+    source = wb['Rent Receipt Template']
     target = wb.copy_worksheet(source)
     target.title = datetime(currentYear, currentMonth, 1).strftime("%b(%Y)")
     wb.move_sheet(target, -(len(wb.sheetnames)-1))
